@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Nova mensagem recebida</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'/>
+    <style>
+        body
+        {
+          font-family: 'Roboto', sans-serif;
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 1.5;
+          color: #212529;
+          text-align: left;
+        }
+        h2
+        {
+          text-align: center;
+          padding: .50rem;
+          margin-bottom: 0px;
+        }
+        table
+        {
+          border-collapse: collapse;
+        }
+        table, th, td
+        {
+          border: 1px solid #dee2e6;
+          border-collapse: collapse;
+        }
+        .table
+        {
+          width: 100%;
+          border: 1px solid #dee2e6;
+          margin-bottom: 1rem;
+          color: #212529;
+        }
+        .table, th, td
+        {
+          padding: .50rem;
+          vertical-align: top;
+          border-top: 1px solid #dee2e6;
+        }
+        .bg-myblue
+        {
+          background-color: #008cba !important;
+        }
+        .bg-light2
+        {
+          background-color: #eee !important;
+        }
+        .bg-white
+        {
+          background-color: #fff !important;
+        }
+        .col-sm-6
+        {
+          -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+          max-width: 50%;
+          margin: 0 auto;
+        }
+        .text-white
+        {
+          color: #fff !important;
+        }
+    </style>
+</head>
+<body>
+<div class="col-sm-6">
+    <div class="bg-myblue">
+        <h2 class="text-white">Formul&aacute;rio de Contato</h2>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td class="bg-light2" style="width: 20.0000%;">Nome:</td>
+                <td class="bg-white" style="width: 80.0000%;"><span th:text="${message.nameSender}"></span></td>
+            </tr>
+            <tr>
+                <td class="bg-light2" style="width: 20.0000%;">E-mail:</td>
+                <td class="bg-white" style="width: 80.0000%;"><span th:text="${#strings.defaultString(message.emailSender,'NÃO INFORMADO')}"></span></td>
+            <tr>
+                <td class="bg-light2" style="width: 20.0000%;">Telefone:</td>
+                <td class="bg-white" style="width: 80.0000%;"><span th:text="${#strings.defaultString(message.nuPhoneSender,'NÃO INFORMADO')}"></span></td>
+            </tr>
+            <tr>
+                <td class="bg-light2" style="width: 20.0000%;">Data e Hora:</td>
+                <td class="bg-white" style="width: 80.0000%;"><span th:text="${dateRegister}"></span></td>
+            </tr>
+            <tr>
+                <td class="bg-light2" style="width: 20.0000%;">Mensagem:</td>
+                <td class="bg-white" style="width: 80.0000%;">
+                    <span th:text="${message.messageText}"></span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p th:text="${'Mensagem enviada através do formulário de mensagens disponível em http://' + message.projectSource}"></p>
+</div>
+</body>
+</html>
