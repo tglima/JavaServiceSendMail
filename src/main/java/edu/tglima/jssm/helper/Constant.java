@@ -2,7 +2,7 @@ package edu.tglima.jssm.helper;
 
 public final class Constant
 {
-    public final static String PATH_FILE_GOOGLE_ACCOUNT_KEY = "static/GoogleAccountKeys.json";
+    public final static String PATH_FILE_GOOGLE_ACCOUNT_KEY = "classpath:static/GoogleAccountKeys.json";
     public final static String URL_DB_FIREBASE = "https://databaseshared.firebaseio.com";
     public final static String COLLECTION_MESSAGE = "message";
     public final static String COLLECTION_LOG_EXCEPTION = "logException";
