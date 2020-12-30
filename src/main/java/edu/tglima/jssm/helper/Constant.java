@@ -8,4 +8,5 @@ public final class Constant
     public final static String COLLECTION_LOG_EXCEPTION = "logException";
     public final static String MAIL_TEMPLATE = "mailTemplate";
     public final static String PATTERN_DATE_TIME_BRAZIL = "dd/MM/yyyy HH:mm:ss zzzz";
+    public final static String DEFAULT = "default";
 }
